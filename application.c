@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     uint8_t symmetricKey2[SYM_KEY_SIZE];
     uint8_t initialVector[AES_BLOCK_SIZE];
     uint8_t *fileName;
+    RSA *authenticationServerPublicRSAKey = NULL;
 
     if (argc != 3)
     {
@@ -28,7 +29,7 @@ int main(int argc, char *argv[])
     if(initClient(&fileSock, argv[1])){
         printAuthenticationServerConnection();
     }
-    phase0PreparationServer(&fileSock,symmetricKeyAuthenticationSeverFileServer);
+    phase0PreparationServer(&fileSock,symmetricKeyAuthenticationSeverFileServer, authenticationServerPublicRSAKey);
 
     initServer(&serverSock, argv[2]);
     while(1){

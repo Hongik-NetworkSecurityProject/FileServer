@@ -1,6 +1,6 @@
 #include "../include/phase.h"
 
-void phase0PreparationServer(int *fileSock,uint8_t* symmetricKeyAuthenticationServerFileServer){
+void phase0PreparationServer(int *fileSock,uint8_t* symmetricKeyAuthenticationServerFileServer, RSA* authenticationServerPublicRSAKey){
     uint8_t *publicKey;
     int authenticationserverPublicKeySize;
 
