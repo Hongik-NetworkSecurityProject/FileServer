@@ -19,7 +19,7 @@ void decryptSymmetricKey(uint8_t* cipher, uint8_t* plainText, int SIZE, uint8_t*
     AES_cbc_encrypt(cipher, plainText, SIZE, &key, initialVector, AES_DECRYPT);
 }
 
-RSA* rsaFrompublicKey(const char * publicKey){
+RSA* rsaFromPublicKey(const char * publicKey){
     RSA *rsa = NULL;
     BIO *bio = BIO_new_mem_buf(publicKey, strlen(publicKey));
     PEM_read_bio_RSAPublicKey(bio, &rsa, 0, 0);
