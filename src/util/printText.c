@@ -58,4 +58,13 @@ void printInitialVector(uint8_t* initialVector){
     printf("\n\n");
 }
 
+void printSymmetricKey(uint8_t* symmetricKey1){
+    int i;
+    printf("\nSymmetric key : ");
+    for(i=0; i<SYM_KEY_SIZE;i++){
+        printf("%02x", symmetricKey1[i]);
+    }
+    printf("\n\n");
+}
+
 void printToken(uint8_t* token, int flag);
