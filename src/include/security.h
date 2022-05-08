@@ -7,6 +7,7 @@
 #include "init.h"
 #include "macro.h"
 #include "time.h"
+#include "printText.h"
 
 
 void decryptToken(uint8_t* token, uint8_t* symmetricKeyAuthenticationServerFileServer, uint8_t* initialVectorUse, uint8_t* id, uint8_t* timestamp, uint8_t* symmetricKey2);

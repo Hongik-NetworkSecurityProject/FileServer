@@ -3,6 +3,7 @@
 
 #include "macro.h"
 
+#include <string.h>
 #include <openssl/sha.h>
 #include <openssl/bio.h>
 #include <openssl/pem.h>

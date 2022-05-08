@@ -2,6 +2,7 @@
 #define __ERROR__
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef enum _error_code{
     ARGUMENT,
