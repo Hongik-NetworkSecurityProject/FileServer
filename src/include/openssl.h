@@ -1,3 +1,6 @@
+#ifndef __OPENSSL__
+#define __OPENSSL__
+
 #include "macro.h"
 
 #include <openssl/sha.h>
@@ -13,3 +16,5 @@ typedef enum _keyType{
     SIZE_16,
     SIZE_32
 }KEYTYPE;
+
+#endif

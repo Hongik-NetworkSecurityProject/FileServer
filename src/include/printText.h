@@ -1,3 +1,6 @@
+#ifndef __PRINTTEXT__
+#define __PRINTTEXT__
+
 #include <stdio.h>
 #include <stdint.h>
 
@@ -19,5 +22,4 @@ void printInitialVector(uint8_t* initialVector);
 
 void printToken(uint8_t* token, int flag);
 
-
-
+#endif

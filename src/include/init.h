@@ -1,3 +1,6 @@
+#ifndef __INIT__
+#define __INIT__
+
 #include <arpa/inet.h>
 #include <stdlib.h>
 #include <signal.h>
@@ -16,3 +19,5 @@ typedef struct __user_info{
 int initClient(int *sock, const char* argv);
 int initServer(int *servSock,const char* argv);
 void readChildProcess(int sig);
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef __ERROR__
+#define __ERROR__
+
 #include <stdio.h>
 
 typedef enum _error_code{
@@ -11,3 +14,5 @@ typedef enum _error_code{
 }ERROR_CODE;
 
 void errorHandler(int errorType);
+
+#endif
