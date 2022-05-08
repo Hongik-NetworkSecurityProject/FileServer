@@ -1,3 +1,6 @@
+#ifndef __MACRO__
+#define __MACRO__
+
 #define TRUE 1
 #define FALSE 0
 
@@ -22,3 +25,5 @@
 #define PUBLIC_KEY_BITS 2056
 
 #define FILE_SIZE 1000000
+
+#endif

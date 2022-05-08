@@ -1,6 +1,6 @@
 #include "../include/phase.h"
 
-void phase0PreparationServer(int *fileSock,uint8_t* symmetricKeyAuthenticationServerFileServer){
+void phase0PreparationServer(int *fileSock,uint8_t* symmetricKeyAuthenticationServerFileServer, RSA* authenticationServerPublicRSAKey){
     uint8_t *publicKey;
     int authenticationserverPublicKeySize;
 
@@ -19,7 +19,7 @@ void phase0PreparationServer(int *fileSock,uint8_t* symmetricKeyAuthenticationSe
     printSymmetricKey(symmetricKeyAuthenticationServerFileServer);
 
     puts("Phase 0 :: Encrypt symmetric key.");
-    RSA_public_encSypt(SYM_KEY_SIZE, symmetricKeyAuthenticationServerFileServer, symmetricKeyAuthenticationServerFileServerEncrypted, authenticationServerPublicRSAKey, RSA_PKCS1_PADDING);
+    RSA_public_encrypt(SYM_KEY_SIZE, symmetricKeyAuthenticationServerFileServer, symmetricKeyAuthenticationServerFileServerEncrypted, authenticationServerPublicRSAKey, RSA_PKCS1_PADDING);
     printEncryptedSymmetricKey(symmetricKeyAuthenticationServerFileServerEncrypted);
 
     write(*fileSock,symmetricKeyAuthenticationServerFileServerEncrypted,RSA_ENC_SIZE);

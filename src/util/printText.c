@@ -58,4 +58,22 @@ void printInitialVector(uint8_t* initialVector){
     printf("\n\n");
 }
 
-void printToken(uint8_t* token, int flag);
+void printSymmetricKey(uint8_t* symmetricKey1){
+    int i;
+    printf("\nSymmetric key : ");
+    for(i=0; i<SYM_KEY_SIZE;i++){
+        printf("%02x", symmetricKey1[i]);
+    }
+    printf("\n\n");
+}
+
+void printToken(uint8_t* token, int flag){
+    int i,j;
+    if(flag==PLAINTEXT)printf("\nToken PlainText : \n\t");
+    if(flag==CIPHER)printf("\nToken Cipher : \n\t");
+    for(i=0, j=0;i<TOKEN_SIZE; i++,j++,j%=PRINT_LINE_SIZE){
+        printf("%02x", token[i]);
+        if(j==PRINT_LINE_SIZE-1) printf("\n\t");
+    }
+    printf("\n");
+}
